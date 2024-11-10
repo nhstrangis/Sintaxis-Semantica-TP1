@@ -5,4 +5,4 @@ Ejecutar como:
 - make
 - ./automata1 ejemplo.txt
   
-![Automata1](https://github.com/user-attachments/assets/db127400-e98c-47a7-bbd8-a0b3b1863e35)
+![automata1](https://github.com/user-attachments/assets/176e043d-8034-4adc-972e-6923b00527dd)
