@@ -5,9 +5,9 @@ const int MAX_LEN = 1000;
 
 // Ejercicio 2
 
-int stringLen(char *arr){
+size_t stringLen(char *arr){
 
-    int len = 0;
+    size_t len = 0;
 
     while (arr[len] != '\0' && (len < MAX_LEN)) {
         len++;
@@ -15,18 +15,13 @@ int stringLen(char *arr){
     return len;
 }
 
-int stringToInt(char *arr){
+size_t stringToInt(char *arr){
 
-    int len, number, finalNumber = 0;
+    size_t len, number, finalNumber = 0;
 
     len = stringLen(arr);
 
-    if (len > 0)
-    {
-        finalNumber = arr[0] - '0';
-    }
-    
-    for (int i = 1; i < len; i++)
+    for (int i = 0; i < len; i++)
     {
         if(!isdigit(arr[i]) && arr[i] != '\0') {
             return -1;

@@ -3,6 +3,6 @@
 
 #include <stdio.h>
 
-int stringToInt(char *arr);
+size_t stringToInt(char *arr);
 
 #endif

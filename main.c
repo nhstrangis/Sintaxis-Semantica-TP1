@@ -29,10 +29,10 @@
                 str[len - 1] = '\0';
             }
 
-            int num = stringToInt(str);
+            size_t num = stringToInt(str);
             
             if (num != -1) {
-                printf("El número ingresado es: %d\n", num);
+                printf("El número ingresado es: %zu\n", num);
             } else {
                 printf("La cadena ingresada es inválida\n");
             } 
