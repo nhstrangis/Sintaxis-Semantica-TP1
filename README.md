@@ -6,6 +6,9 @@ Ejecutar como:
 
 - Ejecutar punto 1:
   ./calcu ejemplo.txt
+
+- Ejecutar punto 2:
+  ./calcu atoi  
   
 - Ejecutar punto 3:
    ./calcu
