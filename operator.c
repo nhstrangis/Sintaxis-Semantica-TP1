@@ -4,6 +4,7 @@
 #include <string.h>
 #include "stack.h"
 #include "queue.h"
+#include "atoi.h"
 
 int precedence(char op) {
     if (op == '+' || op == '-') {
@@ -56,7 +57,8 @@ int resolveRPN(Queue* outputQueue) {
 
         if (isdigit(token)) {
             // Si es un número, lo convertimos a int y lo agregamos a la pila
-            push(&stack, token - '0');
+            char numStr[2] = {token, '\0'};
+            push(&stack, stringToInt(numStr));
         } else {
             // Si es un operador, hacemos la operación
             int b = pop(&stack);

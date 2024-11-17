@@ -7,15 +7,40 @@
     #include "stack.h"
     #include "queue.h"
     #include "operator.h"
+    #include "atoi.h"
 
     const int MAX_INPUT = 10000;
     const int MAX_GROUP = 10000;
 
     int main(int argc, char *argv[]) {    
 
-    // Se ejecuta el punto 1    
+    
     if (argc >= 2) {
 
+        // Se ejecuta el punto 2    
+        if(!strcmp(argv[1], "atoi")) {
+            char str[MAX_INPUT]; 
+
+            printf("Ingrese una cadena numérica: ");
+            fgets(str, sizeof(str), stdin);  
+
+            size_t len = strlen(str);    
+            if (str[len - 1] == '\n') {
+                str[len - 1] = '\0';
+            }
+
+            int num = stringToInt(str);
+            
+            if (num != -1) {
+                printf("El número ingresado es: %d\n", num);
+            } else {
+                printf("La cadena ingresada es inválida\n");
+            } 
+        
+            return 0;
+        }
+
+        // Se ejecuta el punto 1    
         int i = 0; 
         char c; 
         char input[MAX_INPUT] = "";
@@ -37,7 +62,7 @@
         printf("Input: %s\n", input);
         printf("Resultados:\n");
         for (int i = 0; i < MAX_GROUP && groupSizes[i] != 0; i++) {
-            if (groupSizes[i] != 0) {  // Solo se imprinen los grupos que no son vacíos
+            if (groupSizes[i] != 0) {  // solo se imprinen los grupos que no son vacíos
                 printf("Grupo %d: Tipo: %s, Tamaño: %d\n", i + 1, groupTypes[i], groupSizes[i]);
             }
         }

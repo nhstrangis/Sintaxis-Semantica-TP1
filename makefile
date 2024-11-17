@@ -1,6 +1,6 @@
 EXEC_NAME = calcu
 
-SRC = main.c scanner.c stack.c queue.c operator.c
+SRC = main.c scanner.c stack.c queue.c operator.c atoi.c
 
 OBJ = $(SRC:.c=.o)
 
